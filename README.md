@@ -89,8 +89,8 @@ backend is running.
 docker compose up --build
 ```
 
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:8000 (docs at http://localhost:8000/docs)
+- Frontend: https://kj8wnq-wind.vercel.app/
+- Backend API: https://kj8wnq-wind.onrender.com/api/health
 
 ### Option B — manually
 
