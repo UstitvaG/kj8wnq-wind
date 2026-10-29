@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "8000:8000"
+    environment:
+      - DECISION_CUTOFF_HOUR_LOCAL=11
+      - CACHE_TTL_SECONDS=21600
+    volumes:
+      - elexon-cache:/app/.cache
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+
+volumes:
+  elexon-cache:
